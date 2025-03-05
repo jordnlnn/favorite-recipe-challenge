@@ -12,16 +12,49 @@
             padding: 0;
             box-sizing: border-box;
         }
+
+        #hero-section {
+            background-image: linear-gradient(rgba(0, 0, 0,0.6), rgba(0,0 ,0,0.6)), url(https://media.istockphoto.com/id/691984484/photo/homemade-deep-fried-indian-flatbread.jpg?s=612x612&w=is&k=20&c=ilBP-9NATFghrNsU09_MByBFRqf9NzIEjVBLyiDw5nc=);
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 80vh;
+            padding: 0 80px;
+            text-align: center;
+        }
+
+        #hero-section h1 {
+            font-size: 65px;
+        }
+
+        #hero-section h2 {
+            font-size: 28px;
+            margin: 0 0 36px 0;
+        }
+
+        #hero-section p {
+            font-size: 16px;
+            font-style: italic;
+            max-width: 600px;
+        }
+    
     </style>
     <title>Navajo Frybread Recipe</title>
 </head>
 <body>
+    <!--HERO SECTION-->
     <section id="hero-section">
         <h1>Navajo Frybread</h1>
         <h2>A Tradition of Resilience & Flavor</h2>
         <p>Golden, crispy, and deeply rooted in Native American culture, frybread is more than just food — it's a symbol of history,
         survival, and connection.</p>
     </section>
+
+    <!--HISTORY SECTION-->
     <section id="history-section">
         <h2>More Than Just Food</h2>
         <p>Frybread tells a story of hardship, resilience, and adaptation. It originated during the Long Walk of the Navajo (1864),
@@ -29,7 +62,11 @@
         that has since become a powerful cultural staple. Passed down through generations, this simple yet meaningful dish
         remains a staple to this day in Navajo homes, powwows, and gatherings.</p>
     </section>
+
+    <!--MARQUEE, MIGHT CHANGE LATER-->
     <marquee>Let's Get Cooking!</marquee>
+
+    <!--INGREDIENT SECTION-->
     <section id="ingredients-section">
         <h3>Ingredients</h3>
         <ul>
@@ -41,6 +78,8 @@
             <li>Extra flour for dusting</li>
         </ul>
     </section>
+
+    <!--INSTRUCTIONS SECTION-->
     <section id="instructions-section">
         <h3>Instructions</h3>
         <div class="blurb">
@@ -50,11 +89,6 @@
         <div class="blurb">
             <h4>Step 2: Let it Rest</h4>
             <p>Cover the dough and let it rest for 30 minutes. This helps it soften and develop texture.
-            </p>
-        </div>
-        <div class="blurb">
-            <h4>Step 3: Shape the Frybread</h4>
-            <p>Divide the dough into equal portions. Flatten each into a round disc, about ¼-inch thick.
             </p>
         </div>
         <div class="blurb">
@@ -79,5 +113,8 @@
             </p>
         </div>
     </section>
+    <footer>
+        <p>Coded by Jordan Goldtooth 2025 &copy; Source code on <a href="https://github.com/jordnlnn/favorite-recipe-challenge">Github</a></p>
+    </footer>
 </body>
 </html>
