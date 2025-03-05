@@ -28,7 +28,9 @@
         }
 
         #hero-section h1 {
-            font-size: 65px;
+            font-size: 70px;
+          font-family: 'Playfair Display';
+
         }
 
         #hero-section h2 {
@@ -41,7 +43,47 @@
             font-style: italic;
             max-width: 600px;
         }
-    
+
+        /*HISTORY SECTION STYLES*/
+        #history-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 60vh;
+            background-color: rgba(232,195,158, 0.3);
+            padding: 80px;
+        }
+
+        .history-container {
+            background-color: #ffffff;
+            border-radius: 30px;
+            padding: 55px;
+            max-width: 900px;
+        }
+
+        #history-section h2 {
+            font-size: 45px;
+            text-align: center;
+            margin: -80px 0 25px 0;
+            font-family: 'Playfair Display';
+        }
+
+        #history-section p {
+            line-height: 1.4;
+        }
+
+        /*MARQUEE STYLES*/
+        marquee {
+            background-color: #D65A31;
+            font-size: 85px;
+            color: #ffffff;
+            padding: 45px 0;
+            font-weight: 900;
+            font-family: 'Playfair Display';
+        }
+
+
     </style>
     <title>Navajo Frybread Recipe</title>
 </head>
@@ -56,11 +98,13 @@
 
     <!--HISTORY SECTION-->
     <section id="history-section">
+        <div class="history-container">
         <h2>More Than Just Food</h2>
         <p>Frybread tells a story of hardship, resilience, and adaptation. It originated during the Long Walk of the Navajo (1864),
         when Indigenous people were displaced and given limited rations. With flour, salt, and water, they created something
         that has since become a powerful cultural staple. Passed down through generations, this simple yet meaningful dish
         remains a staple to this day in Navajo homes, powwows, and gatherings.</p>
+        </div>
     </section>
 
     <!--MARQUEE, MIGHT CHANGE LATER-->
