@@ -18,6 +18,7 @@
             background-image: linear-gradient(rgba(0, 0, 0,0.6), rgba(0,0 ,0,0.6)), url(https://media.istockphoto.com/id/691984484/photo/homemade-deep-fried-indian-flatbread.jpg?s=612x612&w=is&k=20&c=ilBP-9NATFghrNsU09_MByBFRqf9NzIEjVBLyiDw5nc=);
             background-repeat: no-repeat;
             background-size: cover;
+            background-position: center;
             color: #ffffff;
             display: flex;
             justify-content: center;
@@ -26,6 +27,26 @@
             height: 80vh;
             padding: 0 80px;
             text-align: center;
+        }
+
+        .square-container {
+            display: flex;
+            gap: 5px;
+        }
+
+        .square {
+            height: 10px;
+            width: 10px;
+        }
+
+        #square-1 {
+            background-color: #e3a04b;
+        }
+        #square-2 {
+            background-color: #49a5a5;
+        }
+        #square-3 {
+            background-color: #D65A31;
         }
 
         #hero-section h1 {
@@ -55,6 +76,11 @@
             padding: 125px;
         }
 
+        #history-squares {
+            margin-bottom: -5px;
+            z-index: 5;
+        }
+
         .history-container {
             background-color: #ffffff;
             border-radius: 30px;
@@ -65,8 +91,8 @@
         #history-section h2 {
             font-size: 45px;
             text-align: center;
-            margin: -80px 0 25px 0;
             font-family: 'Playfair Display';
+            margin: 0px 0px 25px 0px;
         }
 
         #history-section p {
@@ -94,7 +120,10 @@
         .ingredients-row, .instructions-row {
             display: flex;
             margin: auto;
-            max-width: 1000px;
+            max-width: 1100px;
+        }
+          .ingredients-row .column-1 {
+            width: 50%;
         }
 
         .ingredients-row img, .instructions-row img {
@@ -106,20 +135,23 @@
 
         .ingredients-row h3 {
             font-family: 'Playfair Display';
-            font-size: 60px;
-            margin-left: -55px;
+            font-size: 55px;
             margin-top: 45px;
+        }
+
+        .ingredients-row .column-2 {
+            margin: auto;
         }
 
         .ingredients-row .column-2 ul {
             margin: 0;
             padding: 0;
             list-style-type: square;
-            padding: 55px;
+            padding: 45px;
         }
 
         .ingredients-row .column-2 li {
-            line-height: 2;
+            margin-bottom: 20px;
         }
         
         li::marker {
@@ -129,7 +161,7 @@
         /*INSTRUCTIONS STYLES */
         #instructions-section {
             padding: 80px;
-            background-color: rgba(109,59,30, 0.2);
+            /*background-color: rgba(109,59,30, 0.2);*/
         }
 
         .instructions-row .column-1 {
@@ -141,19 +173,18 @@
         }
 
         .instructions-row h3 {
-            text-align: right;
             font-size: 55px;
-            margin-right: -35px;
             margin-bottom: 45px;
-            margin-top: 45px;
             position: relative;
             z-index: 5;
             font-family: 'Playfair Display';
         }
 
-        .instructions-row ul {
-            padding-right: 20px;
+        .instructions-row .column-1 {
+            margin: auto;
         }
+
+      
 
         .instructions-row .column-1 li {
             list-style: square;
@@ -179,6 +210,11 @@
 <body>
     <!--HERO SECTION-->
     <section id="hero-section">
+        <div class="square-container">
+            <div class="square" id="square-1"></div>
+            <div class="square" id="square-2"></div>
+            <div class="square" id="square-3"></div>
+        </div>
         <h1>Navajo Frybread</h1>
         <h2>A Tradition of Resilience & Flavor</h2>
         <p>Golden, crispy, and deeply rooted in Native American culture, frybread is more than just food — it's a symbol of history,
@@ -187,6 +223,11 @@
 
     <!--HISTORY SECTION-->
     <section id="history-section">
+        <div class="square-container" id="history-squares">
+            <div class="square" id="square-1"></div>
+            <div class="square" id="square-2"></div>
+            <div class="square" id="square-3"></div>
+        </div>
         <div class="history-container">
         <h2>More Than Just Food</h2>
         <p>Frybread tells a story of hardship, resilience, and adaptation. It originated during the Long Walk of the Navajo (1864),
@@ -203,7 +244,7 @@
     <section id="ingredients-section">
         <div class="ingredients-row">
             <div class="column-1">
-                <img src="https://media.istockphoto.com/id/1147544807/vector/thumbnail-image-vector-graphic.jpg?s=612x612&w=0&k=20&c=rnCKVbdxqkjlcs3xH87-9gocETqpspHFXu5dIGB4wuM=" alt="image-placeholder">
+                <img src="https://media.istockphoto.com/id/1147544807/vector/thumbnail-image-vector-graphic.jpg?s=1024x1024&w=is&k=20&c=5aen6wD1rsiMZSaVeJ9BWM4GGh5LE_9h97haNpUQN5I=" alt="image-placeholder">
             </div>
             <div class="column-2">
                 <h3>What You'll Need:</h3>
@@ -225,29 +266,29 @@
             <div class="column-1">
         <h3>The Cooking Process</h3>
         <ul>
-            <li><h4>Step 1: Mix the Dough</h4>
+            <li><!--<h4>Step 1: Mix the Dough</h4>-->
             <p>In a large bowl, combine flour, salt, and baking powder. Slowly add warm water and mix until a soft dough forms.</p></li>
-            <li><h4>Step 2: Let it Rest</h4>
+            <li><!--h4>Step 2: Let it Rest</h4>-->
             <p>Cover the dough and let it rest for 30 minutes. This helps it soften and develop texture.
             </p></li>
-            <li><h4>Step 3: Shape the Frybread</h4>
+            <li><!--<h4>Step 3: Shape the Frybread</h4>-->
             <p>Divide the dough into equal portions. Flatten each into a round disc, about ¼-inch thick.
             </p></li>
-            <li><h4>Step 4: Heat the Oil</h4>
+            <li><!--<h4>Step 4: Heat the Oil</h4>-->
             <p>Heat 1-2 inches of oil in a deep pan to 350°F (175°C). Test by dropping a small piece of dough—if it sizzles, it's
                 ready.
             </p></li>
-            <li><h4>Step 5: Fry Until Golden</h4>
+            <li><!--<h4>Step 5: Fry Until Golden</h4>-->
             <p>Carefully place a dough disc into the hot oil. Fry for 1-2 minutes per side, flipping once, until golden brown. Drain
                 on paper towels.
             </p></li>
-            <li><h4>Step 6: Serve & Enjoy!</h4>
+            <li><!--<h4>Step 6: Serve & Enjoy!</h4>-->
             <p>Eat warm with honey, powdered sugar, or as the base for Navajo tacos.
             </p></li>
         </ul>
         </div>
         <div class="column-2">
-            <img src="https://media.istockphoto.com/id/1147544807/vector/thumbnail-image-vector-graphic.jpg?s=612x612&w=0&k=20&c=rnCKVbdxqkjlcs3xH87-9gocETqpspHFXu5dIGB4wuM="
+            <img src="https://media.istockphoto.com/id/1147544807/vector/thumbnail-image-vector-graphic.jpg?s=1024x1024&w=is&k=20&c=5aen6wD1rsiMZSaVeJ9BWM4GGh5LE_9h97haNpUQN5I="
                 alt="image-placeholder">
         </div>
         </div>
