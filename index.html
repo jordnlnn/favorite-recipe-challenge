@@ -24,8 +24,7 @@
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            height: 80vh;
-            padding: 0 80px;
+            padding: 200px 80px;
             text-align: center;
         }
 
@@ -97,7 +96,6 @@
 
         #history-section p {
             line-height: 1.4;
-            font-size: 18px;
         }
 
         /*MARQUEE STYLES*/
@@ -135,8 +133,8 @@
 
         .ingredients-row h3 {
             font-family: 'Playfair Display';
-            font-size: 55px;
-            margin-top: 45px;
+            font-size: 45px;
+            margin-bottom: 45px;
         }
 
         .ingredients-row .column-2 {
@@ -147,7 +145,6 @@
             margin: 0;
             padding: 0;
             list-style-type: square;
-            padding: 45px;
         }
 
         .ingredients-row .column-2 li {
@@ -158,10 +155,49 @@
             color: #D65A31;
         }
 
+        @media (max-width: 992px) {
+        .ingredients-row, .instructions-row {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .ingredients-row .column-1 {
+            width: 100%;
+            order: 2;
+        }
+
+        .ingredients-row .column-2 {
+            width: 100%;
+        }
+
+        .ingredients-row h3 {
+            text-align: center;
+        }
+        
+        .ingredients-row img, .instructions-row img {
+            display: block;
+            margin: 45px auto 0px;
+        }
+
+        .list-container {
+            text-align: center;
+        }
+
+        .ingredients-row ul {
+            display: inline-block;
+            text-align: left;
+        }
+
+        .instructions-row h3 {
+            display: block;
+        }
+        
+        
+        }
+
         /*INSTRUCTIONS STYLES */
         #instructions-section {
             padding: 80px;
-            /*background-color: rgba(109,59,30, 0.2);*/
         }
 
         .instructions-row .column-1 {
@@ -173,7 +209,7 @@
         }
 
         .instructions-row h3 {
-            font-size: 55px;
+            font-size: 45px;
             margin-bottom: 45px;
             position: relative;
             z-index: 5;
@@ -183,8 +219,6 @@
         .instructions-row .column-1 {
             margin: auto;
         }
-
-      
 
         .instructions-row .column-1 li {
             list-style: square;
@@ -204,6 +238,46 @@
             text-decoration: wavy;
             color: #381f10;
         }
+
+        /*MOBILE STYLES*/
+
+        @media (max-width: 1200px) {
+            #hero-section {
+                padding: 250px 80px;
+            }
+
+            #hero-section h1 {
+                font-size: 65px;
+            }
+
+            #hero-section h2 {
+                font-size: 22px;
+            }
+
+            #history-section h2 {
+            font-size: 40px;
+            }
+
+            #ingredients-section {
+                padding: 125px;
+            }
+
+            .ingredients-row h3 {
+                font-size: 40px;
+                margin-bottom: 40px;
+            }
+
+            #instructions-section {
+                padding: 125px;
+            }
+
+            .instructions-row h3 {
+                font-size: 40px;
+                margin-bottom: 40px;
+            }
+        }
+
+
     </style>
     <title>Navajo Frybread Recipe</title>
 </head>
@@ -230,10 +304,15 @@
         </div>
         <div class="history-container">
         <h2>More Than Just Food</h2>
-        <p>Frybread tells a story of hardship, resilience, and adaptation. It originated during the Long Walk of the Navajo (1864),
-        when Indigenous people were displaced and given limited rations. With flour, salt, and water, they created something
-        that has since become a powerful cultural staple. Passed down through generations, this simple yet meaningful dish
-        remains a staple to this day in Navajo homes, powwows, and gatherings.</p>
+        <p>Frybread is more than a simple dish—it's a testament to the resilience, strength, and spirit of the Navajo people. Born
+        out of hardship during the Long Walk of 1864, when families were forcibly removed from their lands and given only meager
+        rations, frybread became a symbol of survival.
+        <br>
+        <br>
+        With just flour, salt, water, and ingenuity, they transformed scarcity into sustenance, creating a food that would carry
+        the stories of generations. Today, frybread remains a cherished tradition, served at family gatherings, powwows, and
+        celebrations, connecting the past with the present.
+</p>
         </div>
     </section>
 
@@ -248,6 +327,7 @@
             </div>
             <div class="column-2">
                 <h3>What You'll Need:</h3>
+                <div class="list-container">
                 <ul>
                     <li>4 cups all-purpose flour</li>
                     <li>1 1/2 tsp salt</li>
@@ -256,6 +336,7 @@
                     <li>1-2 cups vegetable oil (for frying)</li>
                     <li>Extra flour for dusting</li>
                 </ul>
+                </div>
             </div>
         </div>
     </section>
