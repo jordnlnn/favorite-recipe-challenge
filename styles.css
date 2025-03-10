@@ -1,0 +1,300 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans';
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display';
+}
+
+#hero-section {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(https://media.istockphoto.com/id/691984484/photo/homemade-deep-fried-indian-flatbread.jpg?s=612x612&w=is&k=20&c=ilBP-9NATFghrNsU09_MByBFRqf9NzIEjVBLyiDw5nc=);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 200px 80px;
+    text-align: center;
+}
+
+.square-container {
+    display: flex;
+    gap: 5px;
+}
+
+.square {
+    height: 10px;
+    width: 10px;
+}
+
+#square-1 {
+    background-color: #e3a04b;
+}
+
+#square-2 {
+    background-color: #49a5a5;
+}
+
+#square-3 {
+    background-color: #D65A31;
+}
+
+#hero-section h1 {
+    font-size: 75px;
+}
+
+#hero-section h2 {
+    font-size: 28px;
+    margin: 0 0 36px 0;
+}
+
+#hero-section p {
+    font-size: 16px;
+    font-style: italic;
+    max-width: 600px;
+}
+
+/*HISTORY SECTION STYLES*/
+#history-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(232, 195, 158, 0.3);
+    padding: 125px;
+}
+
+#history-squares {
+    margin-bottom: -5px;
+    z-index: 5;
+}
+
+.history-container {
+    background-color: #ffffff;
+    border-radius: 30px;
+    padding: 55px;
+    max-width: 900px;
+}
+
+#history-section h2 {
+    font-size: 45px;
+    text-align: center;
+    font-family: 'Playfair Display';
+    margin: 0px 0px 25px 0px;
+}
+
+#history-section p {
+    line-height: 1.4;
+}
+
+/*MARQUEE STYLES*/
+marquee {
+    background-color: #D65A31;
+    font-size: 70px;
+    color: #ffffff;
+    padding: 45px 0;
+    font-weight: 900;
+    font-family: 'Playfair Display';
+    margin: 0;
+}
+
+/*INGREDIENTS SECTION */
+#ingredients-section {
+    padding: 80px;
+    background-color: rgba(232, 195, 158, 0.3);
+}
+
+.ingredients-row,
+.instructions-row {
+    display: flex;
+    margin: auto;
+    max-width: 1100px;
+}
+
+.ingredients-row .column-1 {
+    width: 50%;
+}
+
+.ingredients-row img,
+.instructions-row img {
+    max-width: 100%;
+    height: auto;
+    max-height: 600px;
+    border-radius: 30px;
+}
+
+.ingredients-row h3 {
+    font-size: 45px;
+    margin-bottom: 45px;
+}
+
+.ingredients-row .column-2 {
+    margin: auto;
+}
+
+.ingredients-row .column-2 ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: square;
+}
+
+.ingredients-row .column-2 li {
+    margin-bottom: 20px;
+}
+
+li::marker {
+    color: #D65A31;
+}
+
+@media (max-width: 992px) {
+
+    .ingredients-row,
+    .instructions-row {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .ingredients-row .column-1 {
+        width: 100%;
+        order: 2;
+    }
+
+    .ingredients-row .column-2 {
+        width: 100%;
+    }
+
+    .ingredients-row h3 {
+        text-align: center;
+    }
+
+    .ingredients-row img,
+    .instructions-row img {
+        display: block;
+        margin: 45px auto 0px;
+    }
+
+    .list-container {
+        text-align: center;
+    }
+
+    .ingredients-row ul {
+        display: inline-block;
+        text-align: left;
+    }
+
+    .instructions-row .column-1 {
+        width: 100%;
+    }
+
+}
+
+/*INSTRUCTIONS STYLES */
+#instructions-section {
+    padding: 80px;
+    background-color: #e3a14b70;
+}
+
+.instructions-row .column-1 {
+    width: 50%;
+}
+
+.instructions-row img {
+    z-index: 0;
+}
+
+.instructions-row h3 {
+    font-size: 45px;
+    margin-bottom: 45px;
+    position: relative;
+    z-index: 5;
+}
+
+.instructions-row .column-1 {
+    margin: auto;
+}
+
+.instructions-row .column-1 li {
+    list-style: square;
+    margin-bottom: 20px;
+}
+
+/*VARIATION STYLES*/
+#variations-section {
+    background-color: #ffffff;
+    padding: 80px;
+}
+
+#variations-section h2 {
+    text-align: center;
+}
+
+.blurb-container {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.blurb-container img {
+    width: 100%;
+    height: auto;
+}
+
+/*FOOTER STYLES*/
+footer {
+    background-color: #D65A31;
+    color: #ffffff;
+    text-align: center;
+    padding: 32px;
+    font-size: 14px
+}
+
+footer a {
+    text-decoration: wavy;
+    color: #381f10;
+}
+
+/*MOBILE STYLES*/
+
+@media (max-width: 1200px) {
+    #hero-section {
+        padding: 250px 80px;
+    }
+
+    #hero-section h1 {
+        font-size: 65px;
+    }
+
+    #hero-section h2 {
+        font-size: 22px;
+    }
+
+    #history-section h2 {
+        font-size: 40px;
+    }
+
+    #ingredients-section {
+        padding: 125px;
+    }
+
+    .ingredients-row h3 {
+        font-size: 40px;
+        margin-bottom: 40px;
+    }
+
+    #instructions-section {
+        padding: 125px;
+    }
+
+    .instructions-row h3 {
+        font-size: 40px;
+        margin-bottom: 40px;
+    }
+}
