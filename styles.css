@@ -19,7 +19,7 @@ h1, h2, h3, h4, h5, h6 {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 200px 80px;
+    padding: 300px 80px;
     text-align: center;
 }
 
@@ -86,11 +86,11 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 45px;
     text-align: center;
     font-family: 'Playfair Display';
-    margin: 0px 0px 25px 0px;
+    margin: 0px 0px 36px 0px;
 }
 
 #history-section p {
-    line-height: 1.4;
+    line-height: 1.5;
 }
 
 /*MARQUEE STYLES*/
@@ -98,7 +98,7 @@ marquee {
     background-color: #D65A31;
     font-size: 70px;
     color: #ffffff;
-    padding: 45px 0;
+    padding: 65px 0;
     font-weight: 900;
     font-family: 'Playfair Display';
     margin: 0;
@@ -107,14 +107,13 @@ marquee {
 /*INGREDIENTS SECTION */
 #ingredients-section {
     padding: 80px;
-    background-color: rgba(232, 195, 158, 0.3);
+    background-color: #ffffff;
 }
 
-.ingredients-row,
-.instructions-row {
-    display: flex;
-    margin: auto;
-    max-width: 1100px;
+.ingredients-row {
+    display: flex; /*makes direction into row*/
+    margin: auto; /*centers row*/
+    max-width: 1200px;
 }
 
 .ingredients-row .column-1 {
@@ -131,7 +130,7 @@ marquee {
 
 .ingredients-row h3 {
     font-size: 45px;
-    margin-bottom: 45px;
+    margin: 0 0 36px 0;
 }
 
 .ingredients-row .column-2 {
@@ -200,28 +199,31 @@ li::marker {
     background-color: #e3a14b70;
 }
 
-.instructions-row .column-1 {
-    width: 50%;
+.instructions-row {
+    display: flex; /*makes direction into row*/
+    gap: 45px;
+    margin: auto; /*centers row*/
+    max-width: 1200px;
 }
 
-.instructions-row img {
-    z-index: 0;
+.instructions-row .column-1 {
+    width: 50%;
+    margin: auto;
 }
 
 .instructions-row h3 {
     font-size: 45px;
-    margin-bottom: 45px;
-    position: relative;
-    z-index: 5;
-}
-
-.instructions-row .column-1 {
-    margin: auto;
+    margin: 0 0 36px 0;
 }
 
 .instructions-row .column-1 li {
     list-style: square;
     margin-bottom: 20px;
+}
+
+.instructions-row .column-2 {
+    display: flex;
+    justify-content: flex-end;
 }
 
 /*VARIATION STYLES*/
@@ -231,20 +233,52 @@ li::marker {
 }
 
 #variations-section h2 {
+    font-size: 45px;
+    text-align: center;
+    margin: 0 0 36px 0;
+}
+
+.variations-row {
+    display: flex;
+    flex-direction: row;
+    gap: 45px;
+    max-width: 1200px;
+    margin: 150px auto 0;
+}
+
+.variations-row .blurb {
+    background-color: #ededed;
+    border-radius: 30px;
+    padding: 0 32px 32px;
+    width: 33%;
+}
+
+.variations-row img {
+    display: block;
+    width: 200px;
+    height: auto;
+    border-radius: 100%;
+    margin: -100px auto 0px;
+}
+
+.variations-row .blurb-heading {
+    font-size: 32px;
+    margin: 32px 0 22px;
     text-align: center;
 }
 
-.blurb-container {
-    display: flex;
-    flex-direction: row;
-    gap: 32px;
-    max-width: 1200px;
-    margin: auto;
+.variations-row .blurb-text {
+    line-height: 1.5;
 }
 
-.blurb-container img {
-    width: 100%;
-    height: auto;
+#plain-blurb-img {
+    border: 5px solid #e3a04b;
+}
+#sweet-blurb-img {
+    border: 5px solid #49a5a5;
+}
+#savory-blurb-img {
+    border: 5px solid #D65A31;
 }
 
 /*FOOTER STYLES*/
