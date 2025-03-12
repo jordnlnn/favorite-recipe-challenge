@@ -10,7 +10,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #hero-section {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(https://media.istockphoto.com/id/691984484/photo/homemade-deep-fried-indian-flatbread.jpg?s=612x612&w=is&k=20&c=ilBP-9NATFghrNsU09_MByBFRqf9NzIEjVBLyiDw5nc=);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(three-frybread-on-wooden-cutting-board.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -61,37 +61,37 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*HISTORY SECTION STYLES*/
-#history-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background-color: rgba(232, 195, 158, 0.3);
-    padding: 125px;
-}
+ #history-section {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+     background-color: rgba(232, 195, 158, 0.3);
+     padding: 125px;
+ }
 
-#history-squares {
-    margin-bottom: -5px;
-    z-index: 5;
-}
+ #history-squares {
+     margin-bottom: -5px;
+     z-index: 5;
+ }
 
-.history-container {
-    background-color: #ffffff;
-    border-radius: 30px;
-    padding: 55px;
-    max-width: 900px;
-}
+ .history-container {
+     background-color: #ffffff;
+     border-radius: 30px;
+     padding: 55px;
+     max-width: 900px;
+ }
 
-#history-section h2 {
-    font-size: 45px;
-    text-align: center;
-    font-family: 'Playfair Display';
-    margin: 0px 0px 36px 0px;
-}
+ #history-section h2, #personal-story-section h2 {
+     font-size: 45px;
+     text-align: center;
+     font-family: 'Playfair Display';
+     margin: 0px 0px 36px 0px;
+ }
 
-#history-section p {
-    line-height: 1.5;
-}
+ #history-section p {
+     line-height: 1.5;
+ }
 
 /*MARQUEE STYLES*/
 marquee {
@@ -151,52 +151,19 @@ li::marker {
     color: #D65A31;
 }
 
-@media (max-width: 992px) {
 
-    .ingredients-row,
-    .instructions-row {
-        display: flex;
-        flex-direction: column;
-    }
+#recipe-square-section {
+    display: flex;
+}
 
-    .ingredients-row .column-1 {
-        width: 100%;
-        order: 2;
-    }
-
-    .ingredients-row .column-2 {
-        width: 100%;
-    }
-
-    .ingredients-row h3 {
-        text-align: center;
-    }
-
-    .ingredients-row img,
-    .instructions-row img {
-        display: block;
-        margin: 45px auto 0px;
-    }
-
-    .list-container {
-        text-align: center;
-    }
-
-    .ingredients-row ul {
-        display: inline-block;
-        text-align: left;
-    }
-
-    .instructions-row .column-1 {
-        width: 100%;
-    }
-
+#recipe-squares {
+    margin: 0 auto -5px;
 }
 
 /*INSTRUCTIONS STYLES */
 #instructions-section {
     padding: 80px;
-    background-color: #e3a14b70;
+    background-color: rgba(180, 95, 6, 0.3);
 }
 
 .instructions-row {
@@ -281,6 +248,29 @@ li::marker {
     border: 5px solid #D65A31;
 }
 
+/*PERSONAL STORY STYLES*/
+#personal-story-section {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(making-frybread-in-hogan.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 200px 80px;
+    text-align: center;
+}
+
+#personal-story-section p{
+    line-height: 1.5;
+}
+
+#personal-squares {
+    z-index: 5;
+    margin-top: -5px;
+}
+
 /*FOOTER STYLES*/
 footer {
     background-color: #D65A31;
@@ -296,9 +286,8 @@ footer a {
 }
 
 /*MOBILE STYLES*/
-
 @media (max-width: 1200px) {
-    #hero-section {
+    #hero-section, #personal-story-section {
         padding: 250px 80px;
     }
 
@@ -310,7 +299,7 @@ footer a {
         font-size: 22px;
     }
 
-    #history-section h2 {
+    #history-section h2, #personal-story-section h2 {
         font-size: 40px;
     }
 
@@ -332,3 +321,217 @@ footer a {
         margin-bottom: 40px;
     }
 }
+
+@media (max-width: 1000px) {
+
+    .ingredients-row,
+    .instructions-row {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .ingredients-row .column-1 {
+        width: 100%;
+        order: 2;
+    }
+
+    .ingredients-row .column-2 {
+        width: 100%;
+    }
+
+    .ingredients-row h3 {
+        text-align: center;
+    }
+
+    .ingredients-row img,
+    .instructions-row img {
+        display: block;
+        margin: 45px auto 0px;
+    }
+
+    .list-container {
+        text-align: center;
+    }
+
+    .ingredients-row ul,
+    .instructions-row ul {
+        display: inline-block;
+        text-align: left;
+    }
+
+    .instructions-row h3 {
+        text-align: center;
+    }
+
+    .instructions-row .column-1 {
+        width: 100%;
+    }
+
+    .instructions-row ul {
+        width: 80%;
+    }
+
+    /*VARIATION STYLES*/
+    #variations-section {
+        padding: 100px 80px;
+    }
+
+    #variations-section h2 {
+        font-size: 36px;
+        text-align: center;
+        margin: 0 0 30px 0;
+    }
+
+    .variations-row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 150px auto 0;
+    }
+
+    .variations-row .blurb {
+        width: 80%;
+        margin-bottom: 100px;
+    }
+
+
+    .variations-row .blurb-heading {
+        font-size: 28px;
+        margin: 32px 0 22px;
+        text-align: center;
+    }
+
+}
+
+@media (max-width: 750px) {
+
+    #hero-section h1 {
+        font-size: 45px;
+    }
+
+    #history-section {
+        padding: 100px;
+    }
+
+    .history-container {
+        max-width: 1000px;
+    }
+
+    #history-section h2, #personal-story-section h2 {
+        font-size: 40px;
+    }
+
+    #history-section p {
+        font-size: 14px;
+    }
+
+    marquee {
+        font-size: 50px;    
+    }
+
+    #ingredients-section {
+        padding: 80px;    
+    }
+    
+    .ingredients-row h3 {
+        font-size: 40px;
+    }
+
+    .ingredients-row ul li {
+        font-size: 14px;
+    }
+    
+    #instructions-section {
+        padding: 80px;
+    }
+    
+    .instructions-row h3 {
+        font-size: 40px;
+    }
+
+    .instructions-row ul li {
+        font-size: 14px;
+    }
+
+   .instructions-row img {
+        margin: 0;
+   }
+
+   #variations-section {
+    padding: 80px 80px 0px 80px;
+   }
+
+   #variations-section h2 {
+    font-size: 35px;
+   }
+
+   .blurb p {
+         font-size: 14px;
+         text-align: center;
+   }
+}
+
+@media (max-width: 615px) {       
+        #history-section {
+            padding: 80px;
+        }
+    
+        .history-container {
+            max-width: 1000px;
+            padding: 45px;
+        }
+    
+        #history-section h2, #personal-story-section h2 {
+            font-size: 35px;
+        }
+    
+        .ingredients-row h3 {
+            font-size: 35px;
+        }
+    
+        .instructions-row h3 {
+            font-size: 35px;
+        }
+    
+        #variations-section {
+            padding: 80px 80px 0px 80px;
+        }
+    
+        #variations-section h2 {
+            font-size: 35px;
+        }
+    }    
+    
+    @media (max-width: 500px) {
+        #hero-section, #personal-story-section {
+            padding: 225px 60px;
+        }
+
+        #history-section {
+                padding: 80px 60px;
+            }
+        
+            #history-section h2, #personal-story-section h2 {
+                font-size: 30px;
+            }
+        
+            .ingredients-row h3 {
+                font-size: 30px;
+            }
+        
+            .instructions-row h3 {
+                font-size: 30px;
+            }
+        
+            #variations-section {
+                padding: 80px 60px 0px 60px;
+            }
+        
+            #variations-section h2 {
+                font-size: 30px;
+            }
+
+            .variations-row .blurb {
+                width: 100%;
+            }
+    }
