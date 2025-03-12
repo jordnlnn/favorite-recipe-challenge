@@ -10,7 +10,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #hero-section {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(three-frybread-on-wooden-cutting-board.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/159/968/original/three-frybread-on-wooden-cutting-board.jpg?1741743675);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -250,7 +250,7 @@ li::marker {
 
 /*PERSONAL STORY STYLES*/
 #personal-story-section {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(making-frybread-in-hogan.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/159/972/original/making-frybread-in-hogan.jpg?1741744300);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -269,6 +269,13 @@ li::marker {
 #personal-squares {
     z-index: 5;
     margin-top: -5px;
+}
+
+.personal-container {
+        background-color: rgba(255,255,255,0.8);
+        border-radius: 30px;
+        padding: 55px;
+        max-width: 900px;
 }
 
 /*FOOTER STYLES*/

@@ -3,12 +3,554 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans';
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display';
+}
+
+#hero-section {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/159/968/original/three-frybread-on-wooden-cutting-board.jpg?1741743675);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 300px 80px;
+    text-align: center;
+}
+
+.square-container {
+    display: flex;
+    gap: 5px;
+}
+
+.square {
+    height: 10px;
+    width: 10px;
+}
+
+#square-1 {
+    background-color: #e3a04b;
+}
+
+#square-2 {
+    background-color: #49a5a5;
+}
+
+#square-3 {
+    background-color: #D65A31;
+}
+
+#hero-section h1 {
+    font-size: 75px;
+}
+
+#hero-section h2 {
+    font-size: 28px;
+    margin: 0 0 36px 0;
+}
+
+#hero-section p {
+    font-size: 16px;
+    font-style: italic;
+    max-width: 600px;
+}
+
+/*HISTORY SECTION STYLES*/
+ #history-section {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+     background-color: rgba(232, 195, 158, 0.3);
+     padding: 125px;
+ }
+
+ #history-squares {
+     margin-bottom: -5px;
+     z-index: 5;
+ }
+
+ .history-container {
+     background-color: #ffffff;
+     border-radius: 30px;
+     padding: 55px;
+     max-width: 900px;
+ }
+
+ #history-section h2, #personal-story-section h2 {
+     font-size: 45px;
+     text-align: center;
+     font-family: 'Playfair Display';
+     margin: 0px 0px 36px 0px;
+ }
+
+ #history-section p {
+     line-height: 1.5;
+ }
+
+/*MARQUEE STYLES*/
+marquee {
+    background-color: #D65A31;
+    font-size: 70px;
+    color: #ffffff;
+    padding: 65px 0;
+    font-weight: 900;
+    font-family: 'Playfair Display';
+    margin: 0;
+}
+
+/*INGREDIENTS SECTION */
+#ingredients-section {
+    padding: 80px;
+    background-color: #ffffff;
+}
+
+.ingredients-row {
+    display: flex; /*makes direction into row*/
+    margin: auto; /*centers row*/
+    max-width: 1200px;
+}
+
+.ingredients-row .column-1 {
+    width: 50%;
+}
+
+.ingredients-row img,
+.instructions-row img {
+    max-width: 100%;
+    height: auto;
+    max-height: 600px;
+    border-radius: 30px;
+}
+
+.ingredients-row h3 {
+    font-size: 45px;
+    margin: 0 0 36px 0;
+}
+
+.ingredients-row .column-2 {
+    margin: auto;
+}
+
+.ingredients-row .column-2 ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: square;
+}
+
+.ingredients-row .column-2 li {
+    margin-bottom: 20px;
+}
+
+li::marker {
+    color: #D65A31;
+}
+
+
+#recipe-square-section {
+    display: flex;
+}
+
+#recipe-squares {
+    margin: 0 auto -5px;
+}
+
+/*INSTRUCTIONS STYLES */
+#instructions-section {
+    padding: 80px;
+    background-color: rgba(180, 95, 6, 0.3);
+}
+
+.instructions-row {
+    display: flex; /*makes direction into row*/
+    gap: 45px;
+    margin: auto; /*centers row*/
+    max-width: 1200px;
+}
+
+.instructions-row .column-1 {
+    width: 50%;
+    margin: auto;
+}
+
+.instructions-row h3 {
+    font-size: 45px;
+    margin: 0 0 36px 0;
+}
+
+.instructions-row .column-1 li {
+    list-style: square;
+    margin-bottom: 20px;
+}
+
+.instructions-row .column-2 {
+    display: flex;
+    justify-content: flex-end;
+}
+
+/*VARIATION STYLES*/
+#variations-section {
+    background-color: #ffffff;
+    padding: 80px;
+}
+
+#variations-section h2 {
+    font-size: 45px;
+    text-align: center;
+    margin: 0 0 36px 0;
+}
+
+.variations-row {
+    display: flex;
+    flex-direction: row;
+    gap: 45px;
+    max-width: 1200px;
+    margin: 150px auto 0;
+}
+
+.variations-row .blurb {
+    background-color: #ededed;
+    border-radius: 30px;
+    padding: 0 32px 32px;
+    width: 33%;
+}
+
+.variations-row img {
+    display: block;
+    width: 200px;
+    height: auto;
+    border-radius: 100%;
+    margin: -100px auto 0px;
+}
+
+.variations-row .blurb-heading {
+    font-size: 32px;
+    margin: 32px 0 22px;
+    text-align: center;
+}
+
+.variations-row .blurb-text {
+    line-height: 1.5;
+}
+
+#plain-blurb-img {
+    border: 5px solid #e3a04b;
+}
+#sweet-blurb-img {
+    border: 5px solid #49a5a5;
+}
+#savory-blurb-img {
+    border: 5px solid #D65A31;
+}
+
+/*PERSONAL STORY STYLES*/
+#personal-story-section {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/159/972/original/making-frybread-in-hogan.jpg?1741744300);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 200px 80px;
+    text-align: center;
+}
+
+#personal-story-section p{
+    line-height: 1.5;
+}
+
+#personal-squares {
+    z-index: 5;
+    margin-top: -5px;
+}
+
+.personal-container {
+        background-color: rgba(255,255,255,0.8);
+        border-radius: 30px;
+        padding: 55px;
+        max-width: 900px;
+}
+
+/*FOOTER STYLES*/
+footer {
+    background-color: #D65A31;
+    color: #ffffff;
+    text-align: center;
+    padding: 32px;
+    font-size: 14px
+}
+
+footer a {
+    text-decoration: wavy;
+    color: #381f10;
+}
+
+/*MOBILE STYLES*/
+@media (max-width: 1200px) {
+    #hero-section, #personal-story-section {
+        padding: 250px 80px;
+    }
+
+    #hero-section h1 {
+        font-size: 65px;
+    }
+
+    #hero-section h2 {
+        font-size: 22px;
+    }
+
+    #history-section h2, #personal-story-section h2 {
+        font-size: 40px;
+    }
+
+    #ingredients-section {
+        padding: 125px;
+    }
+
+    .ingredients-row h3 {
+        font-size: 40px;
+        margin-bottom: 40px;
+    }
+
+    #instructions-section {
+        padding: 125px;
+    }
+
+    .instructions-row h3 {
+        font-size: 40px;
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 1000px) {
+
+    .ingredients-row,
+    .instructions-row {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .ingredients-row .column-1 {
+        width: 100%;
+        order: 2;
+    }
+
+    .ingredients-row .column-2 {
+        width: 100%;
+    }
+
+    .ingredients-row h3 {
+        text-align: center;
+    }
+
+    .ingredients-row img,
+    .instructions-row img {
+        display: block;
+        margin: 45px auto 0px;
+    }
+
+    .list-container {
+        text-align: center;
+    }
+
+    .ingredients-row ul,
+    .instructions-row ul {
+        display: inline-block;
+        text-align: left;
+    }
+
+    .instructions-row h3 {
+        text-align: center;
+    }
+
+    .instructions-row .column-1 {
+        width: 100%;
+    }
+
+    .instructions-row ul {
+        width: 80%;
+    }
+
+    /*VARIATION STYLES*/
+    #variations-section {
+        padding: 100px 80px;
+    }
+
+    #variations-section h2 {
+        font-size: 36px;
+        text-align: center;
+        margin: 0 0 30px 0;
+    }
+
+    .variations-row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 150px auto 0;
+    }
+
+    .variations-row .blurb {
+        width: 80%;
+        margin-bottom: 100px;
+    }
+
+
+    .variations-row .blurb-heading {
+        font-size: 28px;
+        margin: 32px 0 22px;
+        text-align: center;
+    }
+
+}
+
+@media (max-width: 750px) {
+
+    #hero-section h1 {
+        font-size: 45px;
+    }
+
+    #history-section {
+        padding: 100px;
+    }
+
+    .history-container {
+        max-width: 1000px;
+    }
+
+    #history-section h2, #personal-story-section h2 {
+        font-size: 40px;
+    }
+
+    #history-section p {
+        font-size: 14px;
+    }
+
+    marquee {
+        font-size: 50px;    
+    }
+
+    #ingredients-section {
+        padding: 80px;    
+    }
+    
+    .ingredients-row h3 {
+        font-size: 40px;
+    }
+
+    .ingredients-row ul li {
+        font-size: 14px;
+    }
+    
+    #instructions-section {
+        padding: 80px;
+    }
+    
+    .instructions-row h3 {
+        font-size: 40px;
+    }
+
+    .instructions-row ul li {
+        font-size: 14px;
+    }
+
+   .instructions-row img {
+        margin: 0;
+   }
+
+   #variations-section {
+    padding: 80px 80px 0px 80px;
+   }
+
+   #variations-section h2 {
+    font-size: 35px;
+   }
+
+   .blurb p {
+         font-size: 14px;
+         text-align: center;
+   }
+}
+
+@media (max-width: 615px) {       
+        #history-section {
+            padding: 80px;
+        }
+    
+        .history-container {
+            max-width: 1000px;
+            padding: 45px;
+        }
+    
+        #history-section h2, #personal-story-section h2 {
+            font-size: 35px;
+        }
+    
+        .ingredients-row h3 {
+            font-size: 35px;
+        }
+    
+        .instructions-row h3 {
+            font-size: 35px;
+        }
+    
+        #variations-section {
+            padding: 80px 80px 0px 80px;
+        }
+    
+        #variations-section h2 {
+            font-size: 35px;
+        }
+    }    
+    
+    @media (max-width: 500px) {
+        #hero-section, #personal-story-section {
+            padding: 225px 60px;
+        }
+
+        #history-section {
+                padding: 80px 60px;
+            }
         
+            #history-section h2, #personal-story-section h2 {
+                font-size: 30px;
+            }
+        
+            .ingredients-row h3 {
+                font-size: 30px;
+            }
+        
+            .instructions-row h3 {
+                font-size: 30px;
+            }
+        
+            #variations-section {
+                padding: 80px 60px 0px 60px;
+            }
+        
+            #variations-section h2 {
+                font-size: 30px;
+            }
+
+            .variations-row .blurb {
+                width: 100%;
+            }
+    }
     </style>
     <title>Navajo Frybread Recipe</title>
 </head>
@@ -54,7 +596,7 @@
     <section id="ingredients-section">
         <div class="ingredients-row">
             <div class="column-1">
-                <img src="ingredients-on-table-2.jpg" alt="Animation of ingredients">
+                <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/159/967/original/ingredients-on-table-2.jpg?1741743594" alt="Three bowls of ingredients">
             </div>
             <div class="column-2">
                 <h3>What You'll Need:</h3>
@@ -110,7 +652,7 @@
     </div>
         </div>
         <div class="column-2">
-            <img src="flipping-frybread.gif"
+            <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/159/963/original/flipping-frybread.gif?1741737493"
                 alt="image-placeholder">
         </div>
         </div>
@@ -120,19 +662,19 @@
         <h2>Serve & Enjoy - Frybread Your Way!</h2>
         <div class="variations-row">
             <div class="blurb" id="plain-blurb">
-                <img src="plain-option.png" alt="Plain frybread on plate" id="plain-blurb-img">
+                <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/159/969/original/plain-option.png?1741743774" alt="Plain frybread on plate" id="plain-blurb-img">
                 <h4 class="blurb-heading">Plain</h4>
                 <p class="blurb-text">Sometimes, simple is best! Freshly fried and golden brown, plain frybread is delicious on its own.</p>
             </div>
             <div class="blurb" id="sweet-blurb">
-                <img src="https://media.istockphoto.com/id/1147544807/vector/thumbnail-image-vector-graphic.jpg?s=1024x1024&w=is&k=20&c=5aen6wD1rsiMZSaVeJ9BWM4GGh5LE_9h97haNpUQN5I="
-                    alt="image-placeholder" id="sweet-blurb-img">
+                <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/159/970/original/sweet-option.png?1741744092"
+                    alt="Plate with frybread topped with strawberries, bananas, Nutella, and powdered sugar" id="sweet-blurb-img">
                 <h4 class="blurb-heading">Sweet</h4>
                 <p class="blurb-text">A treat for the tast buds! Drizzle with honey, dust with powdered sugar, or top with strawberries and chocolate sauce.</p>
             </div>
             <div class="blurb" id="savory-blurb">
-                <img src="savory-option.png"
-                    alt="Navajo Taco on plate" id="savory-blurb-img">
+                <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/159/971/original/savory-option.png?1741744191"
+                    alt="Frybread topped with meat, beans, cheese, and pico de gallow" id="savory-blurb-img">
                 <h4 class="blurb-heading">Savory</h4>
                 <p class="blurb-text">Turn frybread into a hearty meal! Top it with meat, beans, pico de gallo, and cheese to make my version of
                 Navajo taco.</p>
@@ -141,7 +683,7 @@
     </section>
     <!--PERSONAL STORY SECTION-->
 <section id="personal-story-section">
-    <div class="history-container">
+    <div class="personal-container">
     <h2>Why Frybread is Special To Me</h2>
     <p>Frybread reminds me of home—the warmth of family gatherings, the aroma of fresh bread, and the joy of sharing
     food with loved ones. It's my go-to recipe because of its versatility—you can enjoy it any way that you please, making
