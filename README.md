@@ -1,7 +1,5 @@
 # favorite-recipe-challenge
 
-# Navajo Frybread Recipe Website
-
 ## 📖 About the Project
 
 This project is a beautifully designed webpage dedicated to the traditional Navajo Frybread recipe. It blends storytelling with step-by-step cooking instructions, showcasing the cultural significance of frybread while providing an easy-to-follow guide for making it at home.
@@ -26,20 +24,8 @@ CSS – Styling for an engaging user experience.
 
 JavaScript (if applicable) – Adding interactivity (e.g., animations, scroll effects).
 
-## 🚀 Getting Started
-
-### Viewing the Project
-
-Download or clone this repository.
-
-Open index.html in a web browser.
-
-## 📸 Screenshots
-
-(Include images or GIFs showcasing the layout and interactive elements.)
-
 ## ❤️ Acknowledgments
 
-SheCodes Challenge – Inspiration for the project.
+SheCodes Monthly Challenge – Inspiration for the project.
 
 Navajo Culture & Family Traditions – Honoring the origins of this dish.
